@@ -1,6 +1,8 @@
+import BrandCompany from "@/Components/BrandCompany";
 import Contact from "@/Components/Contact";
 import Footer from "@/Components/Footer";
 import Banner from "@/Components/Home/Banner/Banner";
+import LuckyCuppon from "@/Components/LuckyCuppon";
 
 
 export default function Home() {
@@ -8,7 +10,9 @@ export default function Home() {
     <>
       <div>
         <Banner/>
-        <Contact/>
+        <Contact />
+        <LuckyCuppon/>
+        <BrandCompany/>
         <Footer/>
       </div>
     </>

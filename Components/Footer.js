@@ -7,41 +7,45 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   console.log(currentYear)
+  const socialMedia = (
+    <div className="flex gap-1">
+      <div
+        className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
+        title="Facebook"
+      >
+        <FaFacebook className="text-3xl " />
+      </div>
+      <div
+        className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
+        title="Facebook"
+      >
+        <FaInstagram className="text-3xl" />
+      </div>
+      <div
+        className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
+        title="LinkedIn"
+      >
+        <FaLinkedin className="text-3xl" />
+      </div>
+      <div
+        className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
+        title="Dribbble"
+      >
+        <FaDribbble className="text-3xl" />
+      </div>
+    </div>
+  );
 
   return (
-    <section>
-      <div className="flex justify-between items-center px-12">
-        <h1 className="text-3xl font-bold">
+    <section className="max-w-6xl mx-auto">
+      <div className="md:flex justify-between items-center px-6 lg:px-12">
+        <h1 className="text-2xl font-bold relative">
+          <span className="absolute -top-4 text-green-500 text-4xl font-extrabold -z-10">November</span>
           Typhoon<span className="text-red-500">.</span>
         </h1>
-        <div className="flex gap-1">
-          <div
-            className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
-            title="Facebook"
-          >
-            <FaFacebook className="text-3xl " />
-          </div>
-          <div
-            className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
-            title="Facebook"
-          >
-            <FaInstagram className="text-3xl" />
-          </div>
-          <div
-            className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
-            title="LinkedIn"
-          >
-            <FaLinkedin className="text-3xl" />
-          </div>
-          <div
-            className=" p-2 hover:bg-black rounded-full hover:text-white duration-700 cursor-pointer"
-            title="Dribbble"
-          >
-            <FaDribbble className="text-3xl" />
-          </div>
-        </div>
+        <div className="hidden md:block">{socialMedia}</div>
       </div>
-      <div className="grid grid-cols-4 mt-5 gap-4 px-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 mt-5 gap-4 px-6 lg:px-12">
         {/* address section */}
         <div>
           <div className="flex">
@@ -108,7 +112,7 @@ const Footer = () => {
             ShortCode
           </p>
         </div>
-        <div className="flex flex-col items-end justify-center gap-2">
+        <div className="flex flex-col items-center mt-4 lg:mt-0 md:items-start lg:items-end justify-center gap-2">
           <img
             className="w-40"
             src="https://i.ibb.co/VV2zy6v/5a902db97f96951c82922874.png"
@@ -120,6 +124,7 @@ const Footer = () => {
             alt=""
           />
         </div>
+        <div className="md:hidden mx-auto">{socialMedia}</div>
       </div>
       <div className="text-center py-4 bg-gray-800 text-white mt-4">
         <h1>Copyright @{currentYear} || November Typhoon </h1>
